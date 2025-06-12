@@ -1,182 +1,104 @@
-# Nexus: Genesis Protocol
+# Nexus Genesis Protocol Game
 
-A 3D puzzle-adventure game for the Nexus Playground Level 2 contest, where players act as "Genesis Architects" building and securing the Nexus blockchain network.
+A fun, interactive web-based game that combines the excitement of catching falling items with blockchain integration. Players catch falling Nexus logos and thematic emojis to score points, with the ability to submit their scores to the Nexus blockchain.
 
----
+## 🎮 Game Features
 
-## 🚀 Setup Instructions
+- **Interactive Gameplay**: Catch falling Nexus logos and thematic emojis
+- **Blockchain Integration**: Submit your high scores to the Nexus blockchain
+- **Mobile Support**: Fully playable on both desktop and mobile devices
+- **Visual Effects**: Smooth animations and visual feedback
+- **Sound Effects**: Audio feedback when catching items
+- **Responsive Design**: Works on various screen sizes
 
-### 1. Add Nexus Testnet to MetaMask
-- Open MetaMask and click "Add Network".
-- Use the following details:
-  - **Network Name:** Nexus Layer 1
-  - **Chain ID:** 393
-  - **RPC URL:** https://rpc.nexus.xyz/http
-  - **WebSocket URL:** wss://rpc.nexus.xyz/ws
-  - **Block Explorer:** https://explorer.nexus.xyz
-- Save the network.
+## 🎯 How to Play
 
-### 2. Obtain Test $NEX Tokens
-- Visit the Nexus Testnet II faucet (see [Nexus Testnet II announcements](https://docs.nexus.xyz) or Nexus X/Twitter).
-- Request test $NEX tokens to your MetaMask address.
+1. Connect your MetaMask wallet (optional, but required for score submission)
+2. Click or tap the falling items to score points
+3. Try to catch as many items as possible within 30 seconds
+4. Your score will be automatically submitted to the blockchain if you're connected
 
-### 3. Deploy the Smart Contract
-- Open [Remix IDE](https://rpc.nexus.xyz/http).
-- Paste the contents of `contracts/NexusGame.sol` into a new file.
-- Compile with Solidity ^0.8.0.
-- Connect MetaMask to Nexus Testnet in Remix.
-- Deploy the contract.
-- Copy the deployed contract address.
+## 🎨 Game Elements
 
-### 4. Update the Game with Your Contract Address
-- Open `public/game.js`.
-- Find the line:
-  ```js
-  const contract = new web3.eth.Contract(contractABI, '0xYourDeployedContractAddress');
-  ```
-- Replace `'0xYourDeployedContractAddress'` with your actual contract address.
+### Nexus Logo
+- The official Nexus logo appears 30% of the time
+- Represents the core branding of the game
 
-### 5. Run the Game Locally
-- In your project directory:
-  ```bash
-  npm install
-  npm start
-  ```
-- Open [http://localhost:3000](http://localhost:3000) in your browser.
-- Connect MetaMask (set to Nexus Layer 1).
-- Play and interact with the blockchain!
+### Thematic Emojis
+- Space and tech-themed emojis appear 70% of the time
+- Includes: 🚀 💫 🌌 ⚡ 🔮 🌠 💎 🔷 ✨ 🌟
+- Each emoji has a different spawn rate for varied gameplay
 
----
+## 🔧 Technical Requirements
 
-## Build with Ease on Nexus
-- If you have built on Ethereum, you are ready to build on Nexus. It is fully EVM-compatible — use all your existing tools and code.
-- Use Hardhat, Foundry, or Remix for development.
-- Use standard libraries (ethers.js, web3.js, viem).
-- Deploy Solidity contracts without modifications.
+- Modern web browser with JavaScript enabled
+- MetaMask wallet (optional, for blockchain features)
+- Internet connection (for blockchain interaction)
 
-### Example Hardhat Network Config
-```js
-// hardhat.config.js
-module.exports = {
-  networks: {
-    nexus: {
-      url: "https://rpc.nexus.xyz/http",
-      chainId: 393
-    }
-  }
-}
-```
+## 🚀 Getting Started
 
-### Deploy and Verify
-```bash
-npx hardhat deploy --network nexus
-npx hardhat verify --network nexus <CONTRACT_ADDRESS>
-```
+1. Clone the repository
+2. Open `index.html` in your web browser
+3. Connect your MetaMask wallet (optional)
+4. Start playing!
 
----
+## 📱 Mobile Support
 
-## Features
+The game is fully optimized for mobile devices:
+- Touch-friendly interface
+- Responsive design
+- Optimized performance
+- No additional setup required
 
-- 3D exploration with procedurally generated levels
-- Blockchain integration for node deployment and rewards
-- Multiplayer mode for collaborative network building
-- Community-driven level editor and sharing
-- Educational elements teaching Nexus's Layer 1, zkVM, and decentralization
+## ⛓️ Blockchain Integration
 
-## Prerequisites
+The game integrates with the Nexus blockchain:
+- Smart contract for score submission
+- MetaMask wallet connection
+- Gas-optimized transactions
+- Real-time score verification
 
-- Node.js (v16 or later)
-- MetaMask browser extension
-- Git
+## 🎵 Sound Effects
 
-## Installation
+- Pop sound when catching items
+- Audio feedback enhances the gaming experience
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/nexus-genesis-protocol.git
-cd nexus-genesis-protocol
-```
+## 🏆 Scoring System
 
-2. Install dependencies:
-```bash
-npm install
-```
+- Each caught item = 1 point
+- 30-second time limit
+- Different messages based on score:
+  - 0 points: "Try clicking the Nexus logos and emojis!"
+  - < 10 points: "Keep practicing!"
+  - < 25 points: "Nice! You're quick!"
+  - < 40 points: "Great job! Nexus fan!"
+  - ≥ 40 points: "Incredible! Nexus Master!"
 
-3. Configure MetaMask:
-   - Add Nexus Testnet to MetaMask:
-     - Network Name: Nexus Testnet II
-     - RPC URL: [Check Nexus documentation]
-     - Chain ID: [Check Nexus documentation]
-     - Currency Symbol: $NEX
-   - Request test tokens from the Nexus Testnet faucet
+## 🔄 Game Loop
 
-4. Deploy the smart contract:
-   - Use Remix IDE or Hardhat to deploy `contracts/NexusGame.sol`
-   - Copy the deployed contract address
-   - Update the contract address in `public/game.js`
+1. 30-second countdown
+2. Items fall at random speeds
+3. Click/tap to catch items
+4. Score submission to blockchain
+5. Restart option
 
-## Running the Game
+## 🛠️ Development
 
-1. Start the server:
-```bash
-npm start
-```
+Built with:
+- HTML5
+- CSS3
+- JavaScript
+- Web3.js
+- MetaMask API
 
-2. Open your browser and navigate to:
-```
-http://localhost:3000
-```
-
-## Game Controls
-
-- WASD: Move player
-- Click: Place node
-- Space: Interact with nodes
-- E: Toggle editor mode
-- C: Toggle Nexus Codex
-
-## Smart Contract
-
-The game uses a Solidity smart contract (`NexusGame.sol`) to:
-- Track node deployments
-- Manage player scores
-- Handle puzzle verification
-- Store network statistics
-
-## Multiplayer
-
-The game supports real-time multiplayer through Socket.IO:
-- See other players in the game world
-- Collaborate on network building
-- Share node placements
-
-## Level Editor
-
-Create and share custom network layouts:
-1. Toggle editor mode
-2. Place nodes
-3. Save the configuration
-4. Share the JSON on X with #NexusPlayground
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
+## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Acknowledgments
+## 🤝 Contributing
 
-- Nexus Labs for the Playground Level 2 contest
-- Three.js for 3D rendering
-- Socket.IO for multiplayer functionality
-- Web3.js for blockchain integration
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Contact
+## 📞 Support
 
-For questions or support, reach out on X with #NexusPlayground or open an issue on GitHub. 
+For support, please open an issue in the repository or contact the development team.
