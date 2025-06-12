@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nexus Emoji Rain</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.7.5/dist/web3.min.js"></script>
+    <style>
+        body {
+            background: radial-gradient(ellipse at center, #1a237e 0%, #0a0a1a 100%);
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #container {
+            margin-top: 6vh;
+        }
+        #nexusLogo {
+            display: block;
+            margin: 0 auto 18px auto;
+            max-width: 260px;
+            width: 60vw;
+            height: auto;
+            padding-top: 12px;
+        }
+        #connectWallet {
+            padding: 12px 28px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+            color: #fff;
+            margin: 10px 0 0 0;
+            cursor: pointer;
+            box-shadow: 0 4px 16px #0006;
+            transition: background 0.2s;
+        }
+        #connectWallet:hover {
+            background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
+        }
+        #wallet {
+            margin: 8px 0 0 0;
+            font-size: 1em;
+            color: #b3e5fc;
+        }
+        #timer {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+        #score {
+            font-size: 2.2em;
+            margin: 10px 0 20px 0;
+            color: #00e6ff;
+        }
+        #message {
+            font-size: 1.3em;
+            margin: 20px 0 10px 0;
+            min-height: 2.5em;
+        }
+        #restartBtn {
+            padding: 14px 36px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+            color: #fff;
+            margin: 0 0 24px 0;
+            cursor: pointer;
+            box-shadow: 0 4px 16px #0006;
+            transition: background 0.2s;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #restartBtn:hover {
+            background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
+        }
+        #gameArea {
+            position: relative;
+            width: 100vw;
+            height: 60vh;
+            margin: 0 auto;
+            overflow: hidden;
+            background: rgba(0,0,0,0.08);
+            border-radius: 18px;
+            box-shadow: 0 0 32px #00e6ff33;
+        }
+        .emoji {
+            position: absolute;
+            font-size: 2.5em;
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.1s;
+            filter: drop-shadow(0 0 8px #00e6ff99);
+        }
+        .emoji:active {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 16px #fff);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img id="nexusLogo" src="nexus_wordmark-only_white.png" alt="Nexus Logo">
+        <h1>Nexus Emoji Rain</h1>
+        <button id="connectWallet">Connect to Nexus</button>
+        <div id="wallet">Wallet: Not connected</div>
+        <div id="timer">30.0</div>
+        <div id="score">0</div>
+        <div id="message"></div>
+        <button id="restartBtn" style="display:none;">Play Again</button>
+        <div id="gameArea"></div>
+    </div>
+    <audio id="popSound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae3b2.mp3" preload="auto"></audio>
+    <script src="emoji-rain.js"></script>
+</body>
+</html> 
