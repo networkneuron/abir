@@ -98,6 +98,44 @@
             transform: scale(1.2);
             filter: drop-shadow(0 0 16px #fff);
         }
+        
+        /* Social Links Styles */
+        .social-links {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+        
+        .social-link {
+            color: #b3e5fc;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 8px 16px;
+            border-radius: 6px;
+            background: rgba(0, 198, 255, 0.1);
+            border: 1px solid rgba(0, 198, 255, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .social-link:hover {
+            background: rgba(0, 198, 255, 0.2);
+            border-color: rgba(0, 198, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 198, 255, 0.2);
+        }
+        
+        .social-link img {
+            width: 20px;
+            height: 20px;
+            filter: brightness(0) invert(1);
+        }
     </style>
 </head>
 <body>
@@ -113,6 +151,19 @@
         <div id="gameArea"></div>
     </div>
     <audio id="popSound" src="https://pixabay.com/sound-effects/pop-91931" preload="auto"></audio>
+    
+    <!-- Social Links -->
+    <div class="social-links">
+        <a href="https://x.com/NexusLabs" target="_blank" class="social-link">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE4LjI0NCAyLjI1aDMuMTA4bC0xLjM1IDUuNDY4TDcuNDc4IDE2LjM4OGgtNC4xNmw0LjU4My0yLjY4Mi0xLjA4My00LjI1NS0yLjg1MSAxLjY4NEwzLjY2OCAyLjI1aDcuMTY0bC0yLjMxOSA5LjUyMkwyMC4yNDYgMi4yNXptLTEuOTUxIDcuMjkzTDkuNDc4IDI0LjI1aC0yLjg1Mmw4LjM2NS0xNC41ODR6Ii8+PC9zdmc+" alt="X (Twitter)">
+            Follow on X
+        </a>
+        <a href="https://nexus.xyz/" target="_blank" class="social-link">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEyIDJDNi40NzcgMiAyIDYuNDc3IDIgMTJzNC40NzcgMTAgMTAgMTAgMTAtNC40NzcgMTAtMTBTMTcuNTIzIDIgMTIgMnptMCAxOGMtNC40MTggMC04LTMuNTgyLTgtOHMzLjU4Mi04IDgtOCA4IDMuNTgyIDggOC0zLjU4MiA4LTggOHoiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTIgNmMtMy4xNDQgMC02IDIuNjg2LTYgNnMyLjY4NiA2IDYgNiA2LTIuNjg2IDYtNi0yLjY4Ni02LTYtNnptMCAxMGMtMi4yMDkgMC00LTEuNzkxLTQtNHMxLjc5MS00IDQtNCA0IDEuNzkxIDQgNC0xLjc5MSA0LTQgNHoiLz48L3N2Zz4=" alt="Website">
+            Visit Website
+        </a>
+    </div>
+    
     <script src="emoji-rain.js"></script>
 </body>
 </html> 
