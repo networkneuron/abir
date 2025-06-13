@@ -86,7 +86,6 @@ The game integrates with the Nexus blockchain:
 
 Built with:
 - HTML5
-- CSS3
 - JavaScript
 - Web3.js
 - MetaMask API
