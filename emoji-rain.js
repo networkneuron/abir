@@ -140,7 +140,7 @@ function endGame() {
     if (score === 0) msg = "Try clicking the Nexus logos and emojis!";
     else if (score < 10) msg = "Keep practicing!";
     else if (score < 25) msg = "Nice! You're quick!";
-    else if (score < 40) msg = "Great job! Nexus fan!";
+    else if (score < 60) msg = "Great job! Nexus fan!";
     else msg = "Incredible! Nexus Master!";
     messageDiv.innerText = `Time's up!\n${msg}`;
     // Always show replay button at end
