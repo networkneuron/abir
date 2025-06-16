@@ -72,7 +72,7 @@ The game integrates with the Nexus blockchain:
   - < 10 points: "Keep practicing!"
   - < 25 points: "Nice! You're quick!"
   - < 40 points: "Great job! Nexus fan!"
-  - ≥ 40 points: "Incredible! Nexus Master!"
+  - ≥ 60 points: "Incredible! Nexus Master!"
 
 ## 🔄 Game Loop
 
