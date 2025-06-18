@@ -1,7 +1,7 @@
 {
   "name": "nexus-genesis-protocol",
   "version": "1.0.0",
-  "description": "A 3D puzzle-adventure game for the Nexus Playground Level 2 contest",
+  "description": "A for the Nexus Playground Level 2 contest",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
