@@ -1,4 +1,4 @@
-# Nexus Genesis Protocol Game
+# Nexus Emoji Rain
 
 A fun, interactive web-based game that combines the excitement of catching falling items with blockchain integration. Players catch falling Nexus logos and thematic emojis to score points, with the ability to submit their scores to the Nexus blockchain.
 
